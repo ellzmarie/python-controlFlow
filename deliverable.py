@@ -10,12 +10,16 @@
 # Hints:  Use the in operator to check if a character is in another string
 #         For example, if some_char in 'abc':
 
-letter = input('Enter a letter from a-z or A-Z: ').lower()
-if letter in 'aeiou':
-    print(f'{letter} is a vowel')
-else:
-    print(f'{letter} is a consonant')
+letter = input('Please enter a letter from the alphabet (a-z or A-Z): ').lower()
+vowels = 'aeiou'
+consonants = 'bcdfghjklmpqrstvwxyz'
 
+if letter in vowels:
+    print(f'{letter} is a vowel')
+elif letter in consonants:
+    print(f'{letter} is a consonant')
+else:
+    print("Enter a letter")
 
 # exercise-02 Length of Phrase
 
@@ -25,6 +29,11 @@ else:
 # 2. Print the following message:
 #      - What you entered is xx characters long
 # 3. Return to step 1, unless the word 'quit' was entered.
+prompt = input("Please enter a word or phrase: ")
+if prompt != 'quit':   
+    print(f"What you entered is", len(prompt), "characters long")
+else:
+    print('see ya!')
 
 
 # exercise-03 Calculate Dog Years

@@ -71,6 +71,17 @@ elif prompt_three >= 3:
 # 3. Print a message such as:
 #      - A triangle with sides of <a>, <b> & <c> is a <type of triangle> triangle
 
+prompt_four = "Enter the lengths of three side of a triangle:"
+prompt_a = int(input("Enter the length of side a:"))
+prompt_b = int(input("Enter the length of side b:"))
+prompt_c = int(input("Enter the length of side c:"))
+
+if prompt_a == prompt_b == prompt_c:
+    print(f"A triangle with sides of {prompt_a}, {prompt_b} & {prompt_c} is an equilateral triangle.")
+elif prompt_a == prompt_b:
+    print(f"A triangle with sides of {prompt_a}, {prompt_b} & {prompt_c} is an isosceles triangle.")
+else: 
+    print(f"A triangle with sides of {prompt_a}, {prompt_b} & {prompt_c} is a scalene triangle.")
 
 
 # exercise-05 Fibonacci sequence for first 50 terms

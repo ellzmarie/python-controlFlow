@@ -1,5 +1,4 @@
 # exercise-01 Vowel or Consonant
-
 # Write the code that:
 # 1. Prompts the user to enter a letter in the alphabet:
 #      Please enter a letter from the alphabet (a-z or A-Z):
@@ -22,7 +21,6 @@ else:
     print("Enter a letter")
 
 # exercise-02 Length of Phrase
-
 # Write the code that:
 # 1. Prompts the user to enter a phrase:
 #      Please enter a word or phrase:
@@ -37,7 +35,6 @@ else:
 
 
 # exercise-03 Calculate Dog Years
-
 # Write the code that:
 # 1. Prompts the user to enter a dog's age in human years like this:
 #      Input a dog's age in human years:
@@ -47,10 +44,20 @@ else:
 # 3. Prints the answer in the following format:
 #      The dog's age in dog years is xx
 # Hint:  Use the int() function to convert the string returned from input() into an integer
+prompt_three = int(input("Input a dog's age in human years: "))
+
+if prompt_three < 0:
+    print("You need to enter a number.")
+elif prompt_three == 1:
+    print("The dog's age in dog years is 10 years old")
+elif prompt_three == 2:
+    print("The dog's age in dog years is 20 years old")
+elif prompt_three >= 3:
+    print(f"The dog's age in dog years is", (prompt_three * 7), "years old")
+
 
 
 # exercise-04 What kind of Triangle?
-
 # Write the code that:
 # 1. Prompts the user to enter the three lengths of a triangle (one at a time):
 #      Enter the lengths of three side of a triangle:
@@ -67,7 +74,6 @@ else:
 
 
 # exercise-05 Fibonacci sequence for first 50 terms
-
 # Write the code that:
 # 1. Calculates and prints the first 50 terms of the fibonacci sequence.
 # 2. Print each term and number as follows:
@@ -83,7 +89,6 @@ else:
 
 
 # exercise-06 What's the  Season?
-
 # Write the code that:
 # 1. Prompts the user to enter the month (as three characters):
 #      Enter the month of the season (Jan - Dec):

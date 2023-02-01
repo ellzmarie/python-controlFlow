@@ -20,6 +20,8 @@ elif letter in consonants:
 else:
     print("Enter a letter")
 
+print('------------------------------------------------')
+
 # exercise-02 Length of Phrase
 # Write the code that:
 # 1. Prompts the user to enter a phrase:
@@ -33,6 +35,7 @@ if prompt != 'quit':
 else:
     print('see ya!')
 
+print('------------------------------------------------')
 
 # exercise-03 Calculate Dog Years
 # Write the code that:
@@ -55,7 +58,7 @@ elif prompt_three == 2:
 elif prompt_three >= 3:
     print(f"The dog's age in dog years is", (prompt_three * 7), "years old")
 
-
+print('------------------------------------------------')
 
 # exercise-04 What kind of Triangle?
 # Write the code that:
@@ -72,9 +75,9 @@ elif prompt_three >= 3:
 #      - A triangle with sides of <a>, <b> & <c> is a <type of triangle> triangle
 
 prompt_four = "Enter the lengths of three side of a triangle:"
-prompt_a = int(input("Enter the length of side a:"))
-prompt_b = int(input("Enter the length of side b:"))
-prompt_c = int(input("Enter the length of side c:"))
+prompt_a = int(input("Enter the length of side a: "))
+prompt_b = int(input("Enter the length of side b: "))
+prompt_c = int(input("Enter the length of side c: "))
 
 if prompt_a == prompt_b == prompt_c:
     print(f"A triangle with sides of {prompt_a}, {prompt_b} & {prompt_c} is an equilateral triangle.")
@@ -83,7 +86,7 @@ elif prompt_a == prompt_b:
 else: 
     print(f"A triangle with sides of {prompt_a}, {prompt_b} & {prompt_c} is a scalene triangle.")
 
-
+print('------------------------------------------------')
 # exercise-05 Fibonacci sequence for first 50 terms
 # Write the code that:
 # 1. Calculates and prints the first 50 terms of the fibonacci sequence.
@@ -96,8 +99,22 @@ else:
 #      term: 5 / number: 5
 #      etc.
 # Hint: The next number is found by adding the two numbers before it
+def fibonacci(t):
 
+    term1 = 0
+    term2 = 1  
+    if t == 1:
+        print(term1)
+    
+    else:
+        for term in range(0, t):   
+            next_term = term1 + term2              
+            term1 = term2
+            term2 = next_term
+            print(f"term: {term} / number: {next_term}")
 
+fibonacci(51)
+print('------------------------------------------------')
 
 # exercise-06 What's the  Season?
 # Write the code that:
@@ -118,4 +135,26 @@ else:
 # if input_month in ('Jan', 'Feb', 'Mar'):
 # After setting the likely season, you can use another if...elif...else statement to "adjust" if
 # the day number falls within a certain range.
+
+month = input("Enter the month of the season as three characters (Jan - Dec): ")
+day = input("Enter the day of the month (1-31): ")
+
+if (month == "dec", "jan", "feb", "mar"):
+    season = 'winter'
+elif (month ==  "mar", "apr", "may", "jun"):
+    season = 'spring'
+elif (month == "jun", "jul", "aug", "sep"):
+    season = 'summer'
+else:
+    season = 'fall'
+
+if (month == 'Mar') and (day > 19):
+    season = 'spring'
+elif (month == 'Jun') and (day > 20):
+    season = 'summer'
+elif (month == 'Sep') and (day > 21):
+    season = 'fall'
+elif (month == 'Dec') and (day > 20):
+    season = 'winter'
+print(f"{month} {day} is in {season}.")
 
